@@ -13,6 +13,10 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allows users to add new entries
     identifier_field: name # Name of the field used to identify an entry
     fields:
+      - name: name # Is not in en object because it's used as identifier
+        label: Photographer's name
+        hint: Full name.
+        widget: string
       - name: picture
         label: Picture of the photographer
         widget: image
@@ -54,10 +58,6 @@ collections: # A list of collections the CMS should be able to edit
         label: Info in English
         widget: object
         fields:
-          - name: name
-            label: Photographer's name
-            hint: Full name.
-            widget: string
           - name: lifeEvents
             label: Life events
             label_singular: Life event

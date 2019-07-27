@@ -15,7 +15,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - name: name # Is not in en object because it's used as identifier
         label: Photographer's name
-        hint: Full name.
+        hint: Full name in english.
         widget: string
       - name: picture
         label: Picture of the photographer

@@ -15,8 +15,8 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - name: type
         label: Type
-        widget: 'hidden'
-        default: author
+        widget: hidden
+        default: photographer
       - name: name # Is not in en object because it's used as identifier
         label: Photographer's name
         hint: Full name in english.

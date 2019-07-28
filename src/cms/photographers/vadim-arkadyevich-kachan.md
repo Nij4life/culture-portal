@@ -1,4 +1,5 @@
 ---
+type: photographer
 name: Vadim Arkadyevich Kachan
 picture: /assets/вадим_аркадьевич_качан.jpeg
 birthDate: 10/08/1958

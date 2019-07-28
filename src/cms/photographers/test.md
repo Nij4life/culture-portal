@@ -1,4 +1,5 @@
 ---
+type: photographer
 name: ' Vladimir Sapagov'
 picture: /assets/sapahou_light2.jpg
 birthDate: 07/04/1952

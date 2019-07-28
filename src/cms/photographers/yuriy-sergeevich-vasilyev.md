@@ -1,4 +1,5 @@
 ---
+type: photographer
 name: Yuriy Sergeevich Vasilyev
 picture: /assets/yuri_vasilev_700.jpg
 birthDate: 04/25/1939

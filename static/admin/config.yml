@@ -260,14 +260,19 @@ collections: # A list of collections the CMS should be able to edit
   - name: pages
     label: Pages
     files:
-      name: mainPage
-      label: Main Page
-      file: "src/cms/pages/main-page.md"
-      fields:
-        - name: title
-          label: title
-          widget: string
-        - name: siteDescription
-          label: Site description
-          widget: markdown
-        
+      - name: mainPage
+        label: Main Page
+        file: 'src/cms/pages/main-page.md'
+        fields:
+          - name: title
+            label: title
+            widget: string
+          - name: enSiteDescription
+            label: Site description in english
+            widget: markdown
+          - name: ruSiteDescription
+            label: Описание сайта на русском
+            widget: markdown
+          - name: bySiteDescription
+            label: Апісанне сайта па-беларуску
+            widget: markdown

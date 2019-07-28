@@ -9,7 +9,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: photographers # Used in routes, ie.: /admin/collections/:slug/edit
     label: Photographers # Used in the UI
     label_singular: Photographer # Used in the UI, ie: "New Post"
-    folder: photographers # Represents a collection of one or more files with the same format, fields, and configuration options
+    folder: 'src/cms/photographers' # Represents a collection of one or more files with the same format, fields, and configuration options
     create: true # Allows users to add new entries
     identifier_field: name # Name of the field used to identify an entry
     fields:
@@ -23,16 +23,16 @@ collections: # A list of collections the CMS should be able to edit
         required: false
       - name: birthDate
         label: Birthdate
-        hint: "Date format: MM/DD/YYYY."
+        hint: 'Date format: MM/DD/YYYY.'
         widget: date
-        default: ""
+        default: ''
         format: MM/DD/YYYY
         dateFormat: MM/DD/YYYY
       - name: deathDate
         label: Date of death
-        hint: "Date format: MM/DD/YYYY."
+        hint: 'Date format: MM/DD/YYYY.'
         widget: date
-        default: ""
+        default: ''
         format: MM/DD/YYYY
         dateFormat: MM/DD/YYYY
         required: false
@@ -66,9 +66,9 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - name: date
                 label: Event date
-                hint: "Date format: MM/DD/YYYY."
+                hint: 'Date format: MM/DD/YYYY.'
                 widget: date
-                default: ""
+                default: ''
                 format: MM/DD/YYYY
                 dateFormat: MM/DD/YYYY
               - name: desctiption
@@ -84,9 +84,9 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - name: date
                 label: Date of creation
-                hint: "Date format: MM/DD/YYYY."
+                hint: 'Date format: MM/DD/YYYY.'
                 widget: date
-                default: ""
+                default: ''
                 format: MM/DD/YYYY
                 dateFormat: MM/DD/YYYY
               - name: title
@@ -106,16 +106,16 @@ collections: # A list of collections the CMS should be able to edit
               - name: latitude
                 label: Latitude
                 hint: Latitude in decimal degrees format [-90;90]. Use dot as a delimeter.
-                widget: "number"
-                valueType: "float"
+                widget: 'number'
+                valueType: 'float'
                 min: -90
                 max: 90
                 step: 1
               - name: longitude
                 label: Longitude
                 hint: Longitude in decimal degrees format [-180;180]. Use dot as a delimeter.
-                widget: "number"
-                valueType: "float"
+                widget: 'number'
+                valueType: 'float'
                 min: -180
                 max: 180
                 step: 1
@@ -135,9 +135,9 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - name: date
                 label: Дата события
-                hint: "Формат даты: MM/DD/YYYY"
+                hint: 'Формат даты: MM/DD/YYYY'
                 widget: date
-                default: ""
+                default: ''
                 format: MM/DD/YYYY
                 dateFormat: MM/DD/YYYY
               - name: desctiption
@@ -153,9 +153,9 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - name: date
                 label: Дата создания
-                hint: "Формат даты: MM/DD/YYYY"
+                hint: 'Формат даты: MM/DD/YYYY'
                 widget: date
-                default: ""
+                default: ''
                 format: MM/DD/YYYY
                 dateFormat: MM/DD/YYYY
               - name: title
@@ -175,16 +175,16 @@ collections: # A list of collections the CMS should be able to edit
               - name: latitude
                 label: Широта
                 hint: Широта в формате decimal degrees [-90;90]. Для разделения знаков используйте точку.
-                widget: "number"
-                valueType: "float"
+                widget: 'number'
+                valueType: 'float'
                 min: -90
                 max: 90
                 step: 1
-              - name: "longitude"
-                label: "Долгота"
+              - name: 'longitude'
+                label: 'Долгота'
                 hint: Долгота в формате decimal degrees [-180;180]. Для разделения знаков используйте точку.
-                widget: "number"
-                valueType: "float"
+                widget: 'number'
+                valueType: 'float'
                 min: -180
                 max: 180
                 step: 1
@@ -204,9 +204,9 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - name: date
                 label: Дата падзеі
-                hint: "Фармат даты: MM/DD/YYYY"
+                hint: 'Фармат даты: MM/DD/YYYY'
                 widget: date
-                default: ""
+                default: ''
                 format: MM/DD/YYYY
                 dateFormat: MM/DD/YYYY
               - name: desctiption
@@ -222,9 +222,9 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - name: date
                 label: Дата стварэння
-                hint: "Фармат даты: MM/DD/YYYY"
+                hint: 'Фармат даты: MM/DD/YYYY'
                 widget: date
-                default: ""
+                default: ''
                 format: MM/DD/YYYY
                 dateFormat: MM/DD/YYYY
               - name: title
@@ -244,16 +244,16 @@ collections: # A list of collections the CMS should be able to edit
               - name: latitude
                 label: Шырата
                 hint: Шырата ў фармаце decimal degrees [-90;90]. Для падзелу знакаў выкарыстоўвайце кропку.
-                widget: "number"
-                valueType: "float"
+                widget: 'number'
+                valueType: 'float'
                 min: -90
                 max: 90
                 step: 1
-              - name: "longitude"
-                label: "Даўгата"
+              - name: 'longitude'
+                label: 'Даўгата'
                 hint: Даўгата ў фармаце decimal degrees [-180;180]. Для падзелу знакаў выкарыстоўвайце кропку.
-                widget: "number"
-                valueType: "float"
+                widget: 'number'
+                valueType: 'float'
                 min: -180
                 max: 180
                 step: 1

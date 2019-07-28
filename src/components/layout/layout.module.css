@@ -5,7 +5,7 @@
 .header-wrapper > header {
   margin: 0 auto;
   padding: 1rem 1rem;
-  max-width: 650px;
+  max-width: 960px;
 }
 
 .main-header {
@@ -31,5 +31,5 @@
 .content-wrapper {
   margin: 2rem auto;
   padding: 0 1rem;
-  max-width: 650px;
+  max-width: 960px;
 }

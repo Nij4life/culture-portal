@@ -25,7 +25,7 @@
 | time spent | feature                                         |
 | ---------- | ----------------------------------------------- |
 | 1h         | initialize, configure and deploy gatsby project |
-| 4h 30m     | configure Netlify CMS                           |
+| 5h         | configure Netlify CMS                           |
 | 1h         | add content with the help of Netlify CMS        |
 | 1h         | work on site header                             |
 

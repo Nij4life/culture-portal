@@ -257,3 +257,17 @@ collections: # A list of collections the CMS should be able to edit
                 min: -180
                 max: 180
                 step: 1
+  - name: pages
+    label: Pages
+    files:
+      name: mainPage
+      label: Main Page
+      file: "src/cms/pages/main-page.md"
+      fields:
+        - name: title
+          label: title
+          widget: string
+        - name: siteDescription
+          label: Site description
+          widget: markdown
+        

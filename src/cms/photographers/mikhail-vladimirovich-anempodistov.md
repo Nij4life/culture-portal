@@ -1,4 +1,5 @@
 ---
+type: photographer
 name: Mikhail Vladimirovich Anempodistov
 picture: /assets/1280px-aniempadystau_michal_2012.jpg
 birthDate: 03/16/1964

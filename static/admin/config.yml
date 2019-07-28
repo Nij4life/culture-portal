@@ -13,6 +13,10 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allows users to add new entries
     identifier_field: name # Name of the field used to identify an entry
     fields:
+      - name: type
+        label: Type
+        widget: 'hidden'
+        default: author
       - name: name # Is not in en object because it's used as identifier
         label: Photographer's name
         hint: Full name in english.

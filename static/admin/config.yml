@@ -135,11 +135,11 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - name: date
                 label: Дата события
-                hint: "Формат даты: DD.MM.YYYY"
+                hint: "Формат даты: MM/DD/YYYY"
                 widget: date
                 default: ""
-                format: DD.MM.YYYY
-                dateFormat: DD.MM.YYYY
+                format: MM/DD/YYYY
+                dateFormat: MM/DD/YYYY
               - name: desctiption
                 label: Описание события
                 widget: text
@@ -153,11 +153,11 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - name: date
                 label: Дата создания
-                hint: "Формат даты: DD.MM.YYYY"
+                hint: "Формат даты: MM/DD/YYYY"
                 widget: date
                 default: ""
-                format: DD.MM.YYYY
-                dateFormat: DD.MM.YYYY
+                format: MM/DD/YYYY
+                dateFormat: MM/DD/YYYY
               - name: title
                 label: Название работы
                 widget: text
@@ -204,11 +204,11 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - name: date
                 label: Дата падзеі
-                hint: "Фармат даты: DD.MM.YYYY"
+                hint: "Фармат даты: MM/DD/YYYY"
                 widget: date
                 default: ""
-                format: DD.MM.YYYY
-                dateFormat: DD.MM.YYYY
+                format: MM/DD/YYYY
+                dateFormat: MM/DD/YYYY
               - name: desctiption
                 label: Апісанне падзеі
                 widget: text
@@ -222,11 +222,11 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - name: date
                 label: Дата стварэння
-                hint: "Фармат даты: DD.MM.YYYY"
+                hint: "Фармат даты: MM/DD/YYYY"
                 widget: date
                 default: ""
-                format: DD.MM.YYYY
-                dateFormat: DD.MM.YYYY
+                format: MM/DD/YYYY
+                dateFormat: MM/DD/YYYY
               - name: title
                 label: Назва работы
                 widget: text

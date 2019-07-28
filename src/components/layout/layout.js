@@ -2,15 +2,15 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styles from './layout.module.css'
 
-const NavLink = props => (
+const NavLink = ({ to, children }) => (
   <li className={styles.listLink}>
-    <Link to={props.to}>{props.children}</Link>
+    <Link to={to}>{children}</Link>
   </li>
 )
 
-const LanguageLink = props => (
+const LanguageButton = ({ children }) => (
   <li className={styles.listLink}>
-    <a href="#">{props.children}</a>
+    <button className={styles.languageButton} type="button">{children}</button>
   </li>
 )
 
@@ -27,9 +27,9 @@ export default ({ children }) => (
             </ul>
           </nav>
           <ul className={styles.list}>
-            <LanguageLink>EN</LanguageLink>
-            <LanguageLink>RU</LanguageLink>
-            <LanguageLink>BEL</LanguageLink>
+            <LanguageButton>EN</LanguageButton>
+            <LanguageButton>RU</LanguageButton>
+            <LanguageButton>BEL</LanguageButton>
           </ul>
         </div>
       </header>

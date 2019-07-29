@@ -1,6 +1,6 @@
 ---
 type: photographer
-name: ' Vladimir Sapagov'
+name: Vladimir Sapagov
 picture: /assets/sapahou_light2.jpg
 birthDate: 07/04/1952
 deathDate: 03/11/2012
@@ -101,4 +101,3 @@ be:
     - date: 01/01/2000
       title: Паэты Леанід Галубовіч і Анатоль Сыс
 ---
-

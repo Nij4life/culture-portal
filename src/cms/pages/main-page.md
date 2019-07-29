@@ -1,5 +1,5 @@
 ---
-title: Site desctiption
+title: Site description
 enSiteDescription: >-
   This site is dedicated to the prominent Belarusian figures in the field of
   photography.

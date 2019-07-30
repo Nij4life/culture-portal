@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './listPhotographers.module.css'
 
 function CreateLiElement(props) {
-  const { name, photoURL } = props.node.frontmatter;
+  const { name, picture } = props.node.frontmatter;
   return (
     <li key={name} className={styles.li}>
-      <img src={photoURL} alt={`${name}`} />
+      <img width="100" height="100" src={`${picture}`} alt={`${name}`} />
       {name}
     </li>
   )

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import PersonsContainer from '../components/developer/persons';
+import PersonsContainer from '../components/persons/persons';
 
 const Persons = ({ data }) => (
     <PersonsContainer persons={data.allDataJson.edges} />

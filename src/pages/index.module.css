@@ -1,4 +1,6 @@
 .developers-block {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, calc(var(--page-max-width) / 5));
+  grid-row-gap: 15px;
+  justify-content: center;
 }

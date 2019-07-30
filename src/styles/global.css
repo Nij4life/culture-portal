@@ -1,3 +1,7 @@
+:root {
+  --page-max-width: 960px;
+}
+
 html,
 body {
   margin: 0;

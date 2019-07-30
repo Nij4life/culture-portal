@@ -2,8 +2,11 @@
   --page-max-width: 960px;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
+}
+
+li {
+  list-style-type: none;
 }

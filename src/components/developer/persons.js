@@ -44,7 +44,6 @@ class PersonsContainer extends React.Component {
     return (
       <div className={styles.container}>
         <input
-          className={styles.search}
           type="search"
           placeholder="імя / прозвішча / горад"
           onChange={this.handleInput}

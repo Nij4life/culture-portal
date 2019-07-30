@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout/layout';
-import ListPhotographers from '../components/listPhotographer/ListPhotographers';
+import ListPhotographers from '../components/listPhotographer/listPhotographers';
 import { graphql } from 'gatsby';
 
 export default ( {data} ) => (

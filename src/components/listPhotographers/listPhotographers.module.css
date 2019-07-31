@@ -1,0 +1,6 @@
+.photographers-list {
+  list-style-type: none;
+  border: 1px solid black;
+  margin: 5px;
+  border-radius: 10px;
+}

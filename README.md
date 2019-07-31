@@ -10,9 +10,10 @@
 
 ### Aliaksandr Torkhau (@torkhau)
 
-| time spent | feature |
-| ---------- | ------- |
-
+| time spent | feature                                                        |
+| ---------- | ----------------------------------------------                 |
+| 2h         | testing functions contentful CMS                               |
+| 3h         | adding page List of photographers component listPhotographers  |
 
 ### Maryna Shyla (@marry705)
 

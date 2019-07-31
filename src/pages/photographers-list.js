@@ -1,19 +1,25 @@
 import React from 'react';
+import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 import Layout from '../components/layout/layout';
 import ListPhotographers from '../components/listPhotographers/listPhotographers';
 import { graphql } from 'gatsby';
 
-export default ({ data }) => (
+const PhotographersList = ({ data, intl }) => (
   <Layout>
-    <h2>Belarusian photographers</h2>
-    <input type="search" placeholder="Search"></input>
+    <h2>
+      <FormattedMessage id="belarusianPhotographers" />
+    </h2>
+    <input
+      type="search"
+      placeholder={intl.formatMessage({ id: 'search' })}
+    ></input>
     <div>
-      <ListPhotographers
-        list={data.allMarkdownRemark.edges}
-      ></ListPhotographers>
+      <ListPhotographers list={data.allMarkdownRemark.edges} />
     </div>
   </Layout>
 );
+
+export default injectIntl(PhotographersList);
 
 export const query = graphql`
   query {

@@ -1,4 +1,4 @@
-# CodeJam-Culture-Portal
+# CodeJam-Culture-Portal. Group 22.
 
 ## Worklog
 
@@ -30,6 +30,7 @@
 | 1h         | work on site header                             |
 | 1h         | work on main page                               |
 | 1h         | work on developers block                        |
+| 2h         | work on internationalization                    |
 
 ### Stanislau Hutsau (@gutsstas)
 

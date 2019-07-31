@@ -5,7 +5,13 @@ function CreateLiElement(props) {
   const { name, picture } = props.node.frontmatter;
   return (
     <li key={name} className={styles.photographersList}>
-      <img width="100" height="100" src={`${picture}`} alt={`${name}`} className={styles.photographerImage}/>
+      <img
+        width="100"
+        height="100"
+        src={`${picture}`}
+        alt={`${name}`}
+        className={styles.photographerImage}
+      />
       {name}
     </li>
   );

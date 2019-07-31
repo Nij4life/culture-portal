@@ -9,14 +9,17 @@ export default ({ data }) => (
     <p>{data.markdownRemark.frontmatter.enSiteDescription}</p>
     <h2>Our Team</h2>
     <div className={styles.developersBlock}>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <Developer
-          key={node.frontmatter.name}
-          name={node.frontmatter.name}
-          githubName={node.frontmatter.githubName}
-          photoURL={node.frontmatter.picture}
-        />
-      ))}
+      {data.allMarkdownRemark.edges.map(({ node }) => {
+        const { name, githubName, picture } = node.frontmatter;
+        return (
+          <Developer
+            key={name}
+            name={name}
+            githubName={githubName}
+            photoURL={picture}
+          />
+        );
+      })}
     </div>
   </Layout>
 );

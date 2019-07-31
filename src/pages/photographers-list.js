@@ -1,7 +1,7 @@
 import React from 'react';
 import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 import Layout from '../components/layout/layout';
-import ListPhotographers from '../components/listPhotographers/listPhotographers';
+import Search from '../components/search/search'
 import { graphql } from 'gatsby';
 
 const PhotographersList = ({ data, intl }) => (
@@ -9,13 +9,7 @@ const PhotographersList = ({ data, intl }) => (
     <h2>
       <FormattedMessage id="belarusianPhotographers" />
     </h2>
-    <input
-      type="search"
-      placeholder={intl.formatMessage({ id: 'search' })}
-    ></input>
-    <div>
-      <ListPhotographers list={data.allMarkdownRemark.edges} />
-    </div>
+    <Search placeholder={intl.formatMessage({ id: 'search' })} list={data.allMarkdownRemark.edges} />
   </Layout>
 );
 

@@ -1,39 +1,38 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styles from './layout.module.css'
+import React from 'react';
+import { injectIntl, FormattedMessage, Link } from 'gatsby-plugin-intl';
+import LanguageSelector from '../languageSelector/languageSelector';
+import styles from './layout.module.css';
 
 const NavLink = ({ to, children }) => (
   <li className={styles.listLink}>
     <Link to={to}>{children}</Link>
   </li>
-)
+);
 
-const LanguageButton = ({ children }) => (
-  <li className={styles.listLink}>
-    <button className={styles.languageButton} type="button">{children}</button>
-  </li>
-)
-
-export default ({ children }) => (
+const Layout = ({ children }) => (
   <div>
     <div className={styles.headerWrapper}>
       <header>
-        <h1 className={styles.mainHeader}>Photographers of Belarus</h1>
+        <h1 className={styles.mainHeader}>
+          <FormattedMessage id="title" />
+        </h1>
         <div className={styles.headerMenu}>
           <nav>
             <ul className={styles.list}>
-              <NavLink to="/">Home</NavLink>
-              <NavLink to="/photographers-list/">Photographers list</NavLink>
+              <NavLink to="/">
+                <FormattedMessage id="home" />
+              </NavLink>
+              <NavLink to="/photographers-list/">
+                <FormattedMessage id="photographersList" />
+              </NavLink>
             </ul>
           </nav>
-          <ul className={styles.list}>
-            <LanguageButton>EN</LanguageButton>
-            <LanguageButton>RU</LanguageButton>
-            <LanguageButton>BEL</LanguageButton>
-          </ul>
+          <LanguageSelector />
         </div>
       </header>
     </div>
     <div className={styles.contentWrapper}>{children}</div>
   </div>
-)
+);
+
+export default injectIntl(Layout);

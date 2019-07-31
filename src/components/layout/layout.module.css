@@ -1,5 +1,5 @@
 .header-wrapper {
-  background-color: lightgreen;
+  background-color: var(--accent-color);
 }
 
 .header-wrapper > header {
@@ -10,12 +10,14 @@
 
 .main-header {
   margin: 0;
+  color: whitesmoke;
 }
 
 .header-menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .list {
@@ -27,9 +29,6 @@
 .list-link {
   display: inline-block;
   margin-right: 1rem;
-}
-
-.language-button {
 }
 
 .content-wrapper {

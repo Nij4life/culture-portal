@@ -3,7 +3,8 @@ import Layout from '../components/layout/layout';
 import ListPhotographers from '../components/listPhotographers/listPhotographers';
 import { graphql } from 'gatsby';
 
-export default ({ data }) => (
+export default ({ data }) => {
+  return (
   <Layout>
     <h2>Belarusian photographers</h2>
     <input type="search" placeholder="Search"></input>
@@ -13,7 +14,8 @@ export default ({ data }) => (
       ></ListPhotographers>
     </div>
   </Layout>
-);
+  )
+}
 
 export const query = graphql`
   query {
@@ -25,6 +27,9 @@ export const query = graphql`
           frontmatter {
             name
             picture
+          }
+          fields {
+            slug
           }
         }
       }

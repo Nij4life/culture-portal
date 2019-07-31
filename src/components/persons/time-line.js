@@ -1,18 +1,16 @@
 import React from 'react';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 
-const TimelineWrapper = ({ data }) => (
+export default ({ lifeEvents }) => (
   <Timeline>
-    {data.map(obj => (
+    {lifeEvents.map( obj => (
       <TimelineItem
         key={obj.key}
-        dateText={obj.dateText}
+        dateText={obj.date}
         style={{ color: '#e86971' }}
       >
-        <p>{obj.content}</p>
+        <p>{obj.desctiption}</p>
       </TimelineItem>
     ))}
   </Timeline>
 );
-
-export default TimelineWrapper;

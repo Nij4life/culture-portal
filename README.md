@@ -14,6 +14,7 @@
 | ---------- | ----------------------------------------------                 |
 | 2h         | testing functions contentful CMS                               |
 | 3h         | adding page List of photographers component listPhotographers  |
+| 6h         | create search widget, create page with list of photographers   |
 
 ### Maryna Shyla (@marry705)
 
@@ -45,8 +46,8 @@ Maximum points - **240**
 
 ### Min scope - **40**
 
-- [ ] **10** Main page + page with a list of authors + author's page (only html);
-- [ ] **10** Page with list of authors contains search widget;
+- [x] **10** Main page + page with a list of authors + author's page (only html);
+- [x] **10** Page with list of authors contains search widget;
 - [ ] **20** Portal has two languages;
 
 ### Normal scope - **130**

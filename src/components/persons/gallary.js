@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactBnbGallery from 'react-bnb-gallery';
 
-class Example extends Component {
+class Gallary extends Component {
   constructor() {
     super(...arguments);
     this.state = { galleryOpened: false };
@@ -9,9 +9,10 @@ class Example extends Component {
   }
 
   toggleGallery() {
-    this.setState(prevState => ({
+    this.setState( prevState => ({
       galleryOpened: !prevState.galleryOpened
-    }));
+    })
+    );
   }
 
   render () {
@@ -19,8 +20,11 @@ class Example extends Component {
       <button onClick={this.toggleGallery}>Open photo gallery</button>
       <ReactBnbGallery
         show={this.state.galleryOpened}
-        photos={this.pictures.photos}
-        onClose={this.toggleGallery} />
-    );
+        photos={photos}
+        onClose={this.toggleGallery} 
+      />
+    )
   }
 }
+
+export default Gallary;

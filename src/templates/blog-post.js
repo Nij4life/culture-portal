@@ -15,7 +15,7 @@ const Persons = ({ data }) => {
           birthDate = {post.frontmatter.birthDate}
           deathDate = {post.frontmatter.deathDate}
           video = {post.frontmatter.videoId}
-          coordinates = {post.frontmatter.coordinates}
+          coordinates = {post.frontmatter.en.coordinates}
           lifeEvents = {post.frontmatter.en.lifeEvents}
           works = {post.frontmatter.en.works}
           pictures = {post.frontmatter.gallery}

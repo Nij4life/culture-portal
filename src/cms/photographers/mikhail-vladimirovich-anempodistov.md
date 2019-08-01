@@ -13,7 +13,7 @@ gallery:
     title: >-
       Pictures by Mikhail Anempodistova at the exhibition “Colors of Belarus” in
       2017
-videoId: 'https://www.youtube.com/watch?time_continue=1&v=f1dw1C0O5ho'
+videoId: 'f1dw1C0O5ho'
 en:
   coordinates:
     - description: 'Minsk, the birthplace of the photographer.'

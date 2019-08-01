@@ -1,20 +1,34 @@
 import React from 'react';
-import { YMaps, Map, Placemark } from 'react-yandex-maps';
+import { YMaps, Map, GeoObject } from 'react-yandex-maps';
 
-class YandexMap extends React.Component {
-  render() {
+export default ({markets}) => {
     return (
     <YMaps
         enterprise
-        query={{ apikey: 'c28eb37a-b0c8-44bd-b589-29629cb89fa2', }}
+        query={{
+          apikey: 'c28eb37a-b0c8-44bd-b589-29629cb89fa2',
+        }}
     >
-      <div id="map-basics" style={{ height: '50vh', width: '50vw', margin: '0 auto' }}>
-        <Map state={this.props.mapState} width={600} height={400}>
-          <Placemark geometry={this.props.mapState.center} />
-        </Map>
-      </div>
-    </YMaps>
+        <div id="map-basics" style={{ height: '50vh', width: '50vw', margin: '30px auto' }}>
+            <Map state={{center:[markets[0].latitude, markets[0].longitude], zoom: '5'}} width={600} height={400}>
+              {markets.map((item,i) => {
+                return(
+                  <GeoObject key = {i}
+                    geometry={{
+                      type: 'Point',
+                      coordinates: [item.latitude, item.longitude],
+                    }}
+                    properties= {{
+                      iconContent: item.description,
+                    }}
+                    options={{
+                      preset: 'islands#blackStretchyIcon',
+                    }}
+                  />
+                  )
+              })}
+            </Map>
+        </div>
+      </YMaps>
     );
-  }
 }
-export default YandexMap;

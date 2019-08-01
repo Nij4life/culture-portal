@@ -10,14 +10,15 @@ const Persons = ({ data }) => {
     <Layout>
       <div>
         <PersonsInf
-          name={post.frontmatter.name}
-          picture={post.frontmatter.picture}
-          birthDate={post.frontmatter.birthDate}
-          deathDate={post.frontmatter.deathDate}
+          name = {post.frontmatter.name}
+          picture = {post.frontmatter.picture}
+          birthDate = {post.frontmatter.birthDate}
+          deathDate = {post.frontmatter.deathDate}
           video = {post.frontmatter.videoId}
-          map = {post.frontmatter.coordinates}
+          coordinates = {post.frontmatter.coordinates}
           lifeEvents = {post.frontmatter.en.lifeEvents}
           works = {post.frontmatter.en.works}
+          pictures = {post.frontmatter.gallery}
         />
       </div>
     </Layout>
@@ -50,6 +51,10 @@ export const query = graphql`
         deathDate
         picture
         videoId
+        gallery {
+          picture
+          title
+        }
       }
     }
   }`;  

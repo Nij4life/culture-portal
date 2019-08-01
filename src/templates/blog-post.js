@@ -14,6 +14,8 @@ const Persons = ({ data }) => {
           picture={post.frontmatter.picture}
           birthDate={post.frontmatter.birthDate}
           deathDate={post.frontmatter.deathDate}
+          video = {post.frontmatter.videoId}
+          map = {post.frontmatter.coordinates}
           lifeEvents = {post.frontmatter.en.lifeEvents}
           works = {post.frontmatter.en.works}
         />
@@ -28,21 +30,26 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: {slug: {eq: $slug}}) {
       frontmatter {
-        birthDate
+        en {
+          lifeEvents {
+            date
+            desctiption
+          }
+          works {
+            date
+            title
+          }
+          coordinates {
+            description
+            latitude
+            longitude
+          }
+        }
         name
+        birthDate
         deathDate
         picture
-        en {
-            lifeEvents {
-              date
-              desctiption
-            }
-            works {
-              date
-              title
-            }
-        }
+        videoId
       }
     }
-  }
-`;
+  }`;  

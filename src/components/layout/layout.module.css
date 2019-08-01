@@ -1,20 +1,23 @@
 .header-wrapper {
-  background-color: lightgreen;
+  background-color: var(--accent-color);
 }
 
 .header-wrapper > header {
   margin: 0 auto;
   padding: 1rem 1rem;
-  max-width: 960px;
+  max-width: var(--page-max-width);
 }
 
 .main-header {
   margin: 0;
+  color: whitesmoke;
 }
 
 .header-menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .list {
@@ -28,12 +31,8 @@
   margin-right: 1rem;
 }
 
-.language-button {
-  
-}
-
 .content-wrapper {
   margin: 2rem auto;
   padding: 0 1rem;
-  max-width: 960px;
+  max-width: var(--page-max-width);
 }

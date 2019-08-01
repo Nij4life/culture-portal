@@ -1,0 +1,14 @@
+.photographers-list {
+  list-style-type: none;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.photographer-image {
+  object-fit: cover;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}

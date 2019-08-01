@@ -25,6 +25,7 @@ collections: # A list of collections the CMS should be able to edit
         label: Picture of the photographer
         widget: image
         required: false
+        default: '/assets/default-person.jpg'
       - name: birthDate
         label: Birthdate
         hint: 'Date format: MM/DD/YYYY.'
@@ -280,3 +281,27 @@ collections: # A list of collections the CMS should be able to edit
           - name: bySiteDescription
             label: Апісанне сайта па-беларуску
             widget: markdown
+  - name: developers
+    label: Developers
+    label_singular: Developer
+    folder: 'src/cms/developers'
+    create: true
+    identifier_field: name
+    fields:
+      - name: type
+        label: Type
+        widget: hidden
+        default: developer
+      - name: name
+        label: Developer's name
+        hint: Full name in english.
+        widget: string
+      - name: githubName
+        label: Developer's github username
+        hint: Full username without @ symbol.
+        widget: string
+      - name: picture
+        label: Picture of the developer
+        widget: image
+        required: false
+        default: '/assets/default-person.jpg'

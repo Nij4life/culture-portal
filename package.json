@@ -21,6 +21,8 @@
     "netlify-cms-app": "^2.9.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-modal-video": "^1.2.2",
+    "react-yandex-maps": "^4.0.1",
     "vertical-timeline-component-for-react": "^1.0.6"
   },
   "devDependencies": {

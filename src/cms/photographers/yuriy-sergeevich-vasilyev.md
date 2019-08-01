@@ -11,7 +11,7 @@ gallery:
     title: 'From the series "Polesie". Photo: Yury Vasilyev'
   - picture: /assets/vasilev4.jpg
     title: '"A son". Photo: Yury Vasilyev'
-videoId: 'https://www.youtube.com/watch?v=3W4UlxAJJUU'
+videoId: '3W4UlxAJJUU'
 en:
   coordinates:
     - description: The city where the photographer was born.

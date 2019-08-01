@@ -11,7 +11,7 @@ gallery:
     title: Example of a photographer portrait
   - picture: /assets/z_faces2_12_njanja.jpg
     title: Example of a photographer portrait
-videoId: 'https://www.youtube.com/watch?v=odP4XhcHZoY'
+videoId: 'odP4XhcHZoY'
 en:
   coordinates:
     - description: The village where the photographer was born

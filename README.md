@@ -4,8 +4,11 @@
 
 ### Aliaksandr Serykau (@nij4life)
 
-| time spent | feature |
-| ---------- | ------- |
+| time spent | feature                      |
+| ---------- | -----------------------------|
+| 5h         | add slugs and link to them   |
+| 2h         | add error page and favicon   |
+| 4h         | create button that scroll up |
 
 
 ### Aliaksandr Torkhau (@torkhau)
@@ -15,6 +18,7 @@
 | 2h         | testing functions contentful CMS                               |
 | 3h         | adding page List of photographers component listPhotographers  |
 | 6h         | create search widget, create page with list of photographers   |
+
 
 ### Maryna Shyla (@marry705)
 
@@ -33,6 +37,7 @@
 | 1h         | work on main page                               |
 | 1h         | work on developers block                        |
 | 2h         | work on internationalization                    |
+
 
 ### Stanislau Hutsau (@gutsstas)
 

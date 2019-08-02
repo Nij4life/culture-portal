@@ -278,7 +278,7 @@ collections: # A list of collections the CMS should be able to edit
           - name: ruSiteDescription
             label: Описание сайта на русском
             widget: markdown
-          - name: bySiteDescription
+          - name: beSiteDescription
             label: Апісанне сайта па-беларуску
             widget: markdown
   - name: developers
@@ -286,15 +286,23 @@ collections: # A list of collections the CMS should be able to edit
     label_singular: Developer
     folder: 'src/cms/developers'
     create: true
-    identifier_field: name
+    identifier_field: enName
     fields:
       - name: type
         label: Type
         widget: hidden
         default: developer
-      - name: name
+      - name: enName
         label: Developer's name
-        hint: Full name in english.
+        hint: Full name in english
+        widget: string
+      - name: ruName
+        label: Имя разработчика
+        hint: Полное имя на русском
+        widget: string
+      - name: beName
+        label: Імя распрацоўшчыка
+        hint: Поўнае імя па-беларуску
         widget: string
       - name: githubName
         label: Developer's github username

@@ -2,6 +2,7 @@ import React from 'react';
 import { injectIntl, FormattedMessage, Link } from 'gatsby-plugin-intl';
 import LanguageSelector from '../languageSelector/languageSelector';
 import styles from './layout.module.css';
+import Button from '../buttonUp/button';
 
 const NavLink = ({ to, children }) => (
   <li className={styles.listLink}>
@@ -32,6 +33,7 @@ const Layout = ({ children }) => (
       </header>
     </div>
     <div className={styles.contentWrapper}>{children}</div>
+    <Button />
   </div>
 );
 

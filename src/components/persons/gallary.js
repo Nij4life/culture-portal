@@ -1,30 +1,17 @@
 import React from 'react';
-import ReactBnbGallery from 'react-bnb-gallery';
+import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
 
-class Gallary extends Component {
-  constructor() {
-    super(...arguments);
-    this.state = { galleryOpened: false };
-    this.toggleGallery = this.toggleGallery.bind(this);
-  }
-
-  toggleGallery() {
-    this.setState( prevState => ({
-      galleryOpened: !prevState.galleryOpened
-    })
-    );
-  }
-
-  render () {
-    return (
-      <button onClick={this.toggleGallery}>Open photo gallery</button>
-      <ReactBnbGallery
-        show={this.state.galleryOpened}
-        photos={photos}
-        onClose={this.toggleGallery} 
-      />
-    )
-  }
+export default ({ pictures }) => {
+  const handleOnDragStart = (e) => e.preventDefault();
+  return (
+    <AliceCarousel mouseDragEnabled >
+      {pictures.map( picture => (
+        <img 
+          src={picture.picture} 
+          onDragStart={handleOnDragStart} className="yours-custom-class" 
+          alt={`${picture.title}`}/>
+      ))}
+    </AliceCarousel>
+  )
 }
-
-export default Gallary;

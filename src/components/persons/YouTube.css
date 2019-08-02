@@ -1,19 +1,20 @@
 
 @import './modal-video.min.css';
 .open {
-    width:20%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    width: 30%;
     height: 30px;
     color: white;
     text-align: center;
-    margin: 20px auto;
+    margin: 0 auto;
     border-radius: 10px;
-    background: #639;
-    box-shadow: 0 -3px rgba(102, 51, 153, 0.63) inset;
+    background: #AFCDE7;
     transition: 0.2s;
   } 
 
 .open:hover {
-  background: rgb(117, 84, 150);
+  background: #AFCDE7;
   cursor: pointer;
 }
 

@@ -5,9 +5,9 @@ export default ({ lifeEvents }) => (
   <Timeline>
     {lifeEvents.map( obj => (
       <TimelineItem
-        key={obj.key}
-        dateText={obj.date}
-        style={{ color: '#e86971' }}
+        key = {obj.key}
+        dateText = {obj.date}
+        style = {{ color: '#e86971' }}
       >
         <p>{obj.desctiption}</p>
       </TimelineItem>

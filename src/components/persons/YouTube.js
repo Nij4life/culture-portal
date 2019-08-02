@@ -18,15 +18,15 @@ export default class YouTube extends React.Component {
   
     render () {
       return (
-        <>
+        <div style={{ margin: '30px auto' }}>
           <ModalVideo 
             channel='youtube' 
             isOpen={this.state.isOpen} 
             videoId={this.props.videoId} 
             onClose={() => this.setState({isOpen: false})} 
            />
-          <button className="open" onClick={this.openModal}>Open</button>
-        </>
+          <button className="open" onClick={this.openModal}>VIDEO</button>
+        </div>
       )
     }
   }

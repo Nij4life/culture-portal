@@ -10,12 +10,15 @@ const Persons = ({ data }) => {
     <Layout>
       <div>
         <PersonsInf
-          name={post.frontmatter.name}
-          picture={post.frontmatter.picture}
-          birthDate={post.frontmatter.birthDate}
-          deathDate={post.frontmatter.deathDate}
+          name = {post.frontmatter.name}
+          picture = {post.frontmatter.picture}
+          birthDate = {post.frontmatter.birthDate}
+          deathDate = {post.frontmatter.deathDate}
+          video = {post.frontmatter.videoId}
+          coordinates = {post.frontmatter.en.coordinates}
           lifeEvents = {post.frontmatter.en.lifeEvents}
           works = {post.frontmatter.en.works}
+          pictures = {post.frontmatter.gallery}
         />
       </div>
     </Layout>
@@ -28,21 +31,30 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: {slug: {eq: $slug}}) {
       frontmatter {
-        birthDate
+        en {
+          lifeEvents {
+            date
+            desctiption
+          }
+          works {
+            date
+            title
+          }
+          coordinates {
+            description
+            latitude
+            longitude
+          }
+        }
         name
+        birthDate
         deathDate
         picture
-        en {
-            lifeEvents {
-              date
-              desctiption
-            }
-            works {
-              date
-              title
-            }
+        videoId
+        gallery {
+          picture
+          title
         }
       }
     }
-  }
-`;
+  }`;  

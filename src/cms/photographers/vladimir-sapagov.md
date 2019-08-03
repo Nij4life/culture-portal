@@ -1,6 +1,6 @@
 ---
 type: photographer
-name: Vladimir Sapagov_
+name: Vladimir Sapagov
 picture: /assets/sapahou_light2.jpg
 birthplace: Brest
 birthDate: 07/04/1952

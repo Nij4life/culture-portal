@@ -2,6 +2,7 @@
 type: photographer
 name: Vladimir Sapagov
 picture: /assets/sapahou_light2.jpg
+birthplace: Brest
 birthDate: 07/04/1952
 deathDate: 03/11/2012
 gallery:
@@ -43,6 +44,8 @@ en:
     - date: 01/01/2000
       title: 'Poets Golubovic Leonid and Anatoly Sys, Minsk'
 ru:
+  name: Владимир Сапогов
+  birthplace: Брест
   coordinates:
     - description: Детский дом где он рос
       latitude: 52.10747
@@ -63,7 +66,6 @@ ru:
         Канапацкого.
     - date: 03/11/2012
       desctiption: Умер
-  name: Владимир Сапагов
   works:
     - date: 01/01/1989
       title: Чернобыльский путь
@@ -72,6 +74,8 @@ ru:
     - date: 01/01/2000
       title: 'Поэты Леонид Голубович и Анатолий Сыс, Минск, 2000 год'
 be:
+  name: Уладзімір Сапагоў
+  birthplace: Брэст
   coordinates:
     - description: Дзіцячы дом дзе ён рос
       latitude: 52.10747
@@ -92,7 +96,6 @@ be:
         Канапацкага.
     - date: 03/11/2012
       desctiption: Памёр
-  name: Уладзімір Сапагоў
   works:
     - date: 01/01/1989
       title: Чарнобыльскі шлях
@@ -101,3 +104,4 @@ be:
     - date: 01/01/2000
       title: Паэты Леанід Галубовіч і Анатоль Сыс
 ---
+

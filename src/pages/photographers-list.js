@@ -25,6 +25,8 @@ export const query = graphql`
           frontmatter {
             name
             picture
+            birthDate
+            deathDate
           }
           fields {
             slug

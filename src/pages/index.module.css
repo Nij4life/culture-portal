@@ -6,9 +6,14 @@
 }
 
 .description {
-  min-height: 400px;
+  min-height: 380px;
   font-family: Calibri, sans-serif;
   font-weight: 300;
   font-size: 1.4rem;
   text-indent: 2rem;
+}
+
+.photographer-of-the-day-wrapper {
+  display: flex;
+  justify-content: center;
 }

@@ -3,9 +3,9 @@ import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 
 export default ({ lifeEvents }) => (
   <Timeline>
-    {lifeEvents.map( obj => (
+    {lifeEvents.map( (obj, index) => (
       <TimelineItem
-        key = {obj.key}
+        key = {index.toString()}
         dateText = {obj.date}
         style = {{ color: '#e86971' }}
       >

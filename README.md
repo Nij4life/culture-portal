@@ -15,6 +15,7 @@
 | 2h         | testing functions contentful CMS                               |
 | 3h         | adding page List of photographers component listPhotographers  |
 | 6h         | create search widget, create page with list of photographers   |
+| 2h         | add to search place of birth, add new field to CMS "birthplace"|
 
 ### Maryna Shyla (@marry705)
 

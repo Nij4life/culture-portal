@@ -9,19 +9,17 @@ class Search extends Component {
       elems: [],
     };
     for (let index = 0; index < props.list.length; index += 1) {
-      const { name, picture, birthDate, deathDate } = props.list[
-        index
-      ].node.frontmatter;
+      const { name, picture, birthDate, deathDate, birthplace } = props.list[index].node.frontmatter;
       const { slug } = props.list[index].node.fields;
-      this.state.initElems.push([name, picture, birthDate, deathDate, slug]);
-      this.state.elems.push([name, picture, birthDate, deathDate, slug]);
+      this.state.initElems.push([name, picture, birthDate, deathDate, birthplace || '', slug]);
+      this.state.elems.push([name, picture, birthDate, deathDate, birthplace || '', slug]);
     }
   }
 
   filter(event) {
     const updateElems = this.state.initElems.filter(item => {
       return (
-        item[0].toLowerCase().search(event.target.value.toLowerCase()) !== -1
+        `${item[0]} ${item[4]}`.toLowerCase().search(event.target.value.toLowerCase()) !== -1
       );
     });
     this.setState({ elems: updateElems });

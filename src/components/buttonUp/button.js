@@ -9,20 +9,25 @@ export default class Button extends React.Component {
     }
 
     this._hendlerClick = this._hendlerClick.bind(this);
+    this._viewScroll = this._viewScroll.bind(this);
   }
 
-  test() {
-    if(document.documentElement.scrollTop > 0) {
+  _viewScroll() {
+    if(this.state.display === 'none' && document.documentElement.scrollTop > 100) {
       this.setState({display: 'block'});
-    } else {
+    } 
+    if(document.documentElement.scrollTop <= 100 && this.state.display === 'block') {
       this.setState({display: 'none'});
     }
   }
   
   componentDidMount() {
-    window.addEventListener('scroll', ()=> {this.test()});
+    window.addEventListener('scroll', this._viewScroll);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._viewScroll);
+  }
    
   _hendlerClick() {
     window.scrollTo({
@@ -39,4 +44,3 @@ export default class Button extends React.Component {
     )
   }
 }
-

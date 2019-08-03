@@ -26,6 +26,10 @@ collections: # A list of collections the CMS should be able to edit
         widget: image
         required: false
         default: '/assets/default-person.jpg'
+      - name: birthplace
+        label: Place of Birth
+        hint: Place of Birth in english
+        widget: string
       - name: birthDate
         label: Birthdate
         hint: 'Date format: MM/DD/YYYY.'
@@ -132,6 +136,10 @@ collections: # A list of collections the CMS should be able to edit
             label: Имя фотографа
             hint: ФИО фотографа.
             widget: string
+          - name: birthplace
+            label: Место рождения
+            hint: Место рождения фотографа
+            widget: string
           - name: lifeEvents
             label: События в жизни
             label_singular: Событие в жизни
@@ -200,6 +208,10 @@ collections: # A list of collections the CMS should be able to edit
           - name: name
             label: Імя фатографа
             hint: Прозвішча, імя, імя па бацьку.
+            widget: string
+          - name: birthplace
+            label: Месца нараджэння
+            hint: Месца нараджэння фатографа
             widget: string
           - name: lifeEvents
             label: Падзеі ў жыцці

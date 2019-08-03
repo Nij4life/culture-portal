@@ -20,11 +20,11 @@
 
 | time spent | feature                                                                   |
 | ---------- | --------------------------------------------------------------------------|
-| 5h         | added first data                                                          |
-| 2h         | added a photographer’s test page with the name and dates of life and death|
-| 3h         | added a timeline component                                                |
-| 3h         | added a gallery component                                                 |
-| 2h         | edit styles on user page                                                  |
+| 3h         | added first data                                                          |
+| 1h         | added a photographer’s test page with the name and dates of life and death|
+| 2h         | added a timeline component                                                |
+| 2h         | added a gallery component                                                 |
+| 1.5h       | edit styles on user page                                                  |
 | 1h         | syntax error correction, eslint configuration                             |
 
 

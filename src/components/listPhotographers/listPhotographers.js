@@ -9,6 +9,7 @@ export default ({ elems }) => (
       const [name, picture, birthDate, deathDate, slug] = elem;
       return (
         <PhotographerCard
+          key={name}
           photoURL={picture}
           name={name}
           slug={slug}

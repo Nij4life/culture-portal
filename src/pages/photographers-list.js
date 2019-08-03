@@ -27,6 +27,7 @@ export const query = graphql`
             picture
             birthDate
             deathDate
+            birthplace
           }
           fields {
             slug

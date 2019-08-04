@@ -34,7 +34,8 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <AppBar position="static">
+      <AppBar style={{ padding: '0 10%' }}
+        position="static">
         <Typography variant="h4" component="h1" className={classes.header}>
           <FormattedMessage id="title" />
         </Typography>

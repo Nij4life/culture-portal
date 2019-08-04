@@ -92,4 +92,4 @@ Maximum points - **240**
 - [ ] **-40** if there is no worklog for team
 - [ ] **-20** too primitive (ugly for 2019) design / UX
 
-**40+120+70 = 230**
+**40+130+70 = 240**

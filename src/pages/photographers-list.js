@@ -59,10 +59,10 @@ export const query = graphql`
             birthDate
             deathDate
             birthplace
-            ru {
+            be {
               name
             }
-            be {
+            ru {
               name
             }
           }

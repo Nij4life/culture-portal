@@ -31,7 +31,10 @@
     "vertical-timeline-component-for-react": "^1.0.6"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.2",
     "eslint-config-react-app": "^4.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.14.3",
     "prettier": "^1.18.2"
   },
   "repository": {

@@ -4,11 +4,8 @@
 
 ### Aliaksandr Serykau (@nij4life)
 
-| time spent | feature                      |
-| ---------- | -----------------------------|
-| 5h         | add slugs and link to them   |
-| 2h         | add error page and favicon   |
-| 4h         | create button that scroll up |
+| time spent | feature |
+| ---------- | ------- |
 
 
 ### Aliaksandr Torkhau (@torkhau)
@@ -18,12 +15,18 @@
 | 2h         | testing functions contentful CMS                               |
 | 3h         | adding page List of photographers component listPhotographers  |
 | 6h         | create search widget, create page with list of photographers   |
-
+| 2h         | add to search place of birth, add new field to CMS "birthplace"|
 
 ### Maryna Shyla (@marry705)
 
-| time spent | feature |
-| ---------- | ------- |
+| time spent | feature                                                                   |
+| ---------- | --------------------------------------------------------------------------|
+| 3h         | added first data                                                          |
+| 1h         | added a photographer’s test page with the name and dates of life and death|
+| 2h         | added a timeline component                                                |
+| 2h         | added a gallery component                                                 |
+| 1.5h       | edit styles on user page                                                  |
+| 1h         | syntax error correction, eslint configuration                             |
 
 
 ### Maksim Kudrautsau (@ponyborn)
@@ -37,7 +40,6 @@
 | 1h         | work on main page                               |
 | 1h         | work on developers block                        |
 | 2h         | work on internationalization                    |
-
 
 ### Stanislau Hutsau (@gutsstas)
 

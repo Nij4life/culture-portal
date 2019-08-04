@@ -2,31 +2,31 @@ import React, { Component } from 'react';
 import ListPhotographers from '../listPhotographers/listPhotographers';
 
 class Search extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       initElems: [],
-      elems: []
-    }
+      elems: [],
+    };
     for (let index = 0; index < props.list.length; index += 1) {
-      const { name, picture } = props.list[index].node.frontmatter;
+      const { name, picture, birthDate, deathDate, birthplace } = props.list[index].node.frontmatter;
       const { slug } = props.list[index].node.fields;
-      this.state.initElems.push([name, picture, slug]);
-      this.state.elems.push([name, picture, slug]);
+      this.state.initElems.push([name, picture, birthDate, deathDate, birthplace || '', slug]);
+      this.state.elems.push([name, picture, birthDate, deathDate, birthplace || '', slug]);
     }
   }
 
   filter(event) {
     const updateElems = this.state.initElems.filter(item => {
-      return item[0].toLowerCase().search(
-        event.target.value.toLowerCase()) !== -1;
+      return (
+        `${item[0]} ${item[4]}`.toLowerCase().search(event.target.value.toLowerCase()) !== -1
+      );
     });
-    this.setState({elems: updateElems});
+    this.setState({ elems: updateElems });
   }
 
   componentDidMount() {
-    this.setState({elems: this.state.elems});
+    this.setState({ elems: this.state.elems });
   }
 
   render() {
@@ -35,11 +35,11 @@ class Search extends Component {
         <input
           type="search"
           placeholder={this.props.placeholder}
-          onChange={(event) => this.filter(event)}
+          onChange={event => this.filter(event)}
         ></input>
         <ListPhotographers elems={this.state.elems} />
       </div>
-    )
+    );
   }
 }
 

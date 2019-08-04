@@ -7,35 +7,77 @@ import {
 import Layout from '../components/layout/layout';
 import { graphql } from 'gatsby';
 import Developer from '../components/developer/developer';
+import PhotographerCard from '../components/photographerCard/photographerCard';
+import { getRandomIntFromCurrentDate, parseCmsDate } from '../utils';
 import styles from './index.module.css';
 
-const IndexPage = ({ data }) => (
-  <IntlContextConsumer>
-    {({ language: currentLocale }) => (
-      <Layout>
-        <p className={styles.description}>
-          {data.markdownRemark.frontmatter[`${currentLocale}SiteDescription`]}
-        </p>
-        <h2>
-          <FormattedMessage id="ourTeam" />
-        </h2>
-        <div className={styles.developersBlock}>
-          {data.allMarkdownRemark.edges.map(({ node }) => {
-            const { enName, githubName, picture } = node.frontmatter;
-            return (
-              <Developer
-                key={enName}
-                name={node.frontmatter[`${currentLocale}Name`]}
-                githubName={githubName}
-                photoURL={picture}
-              />
-            );
-          })}
-        </div>
-      </Layout>
-    )}
-  </IntlContextConsumer>
-);
+const IndexPage = ({ data }) => {
+  const getDevelopersList = currentLocale =>
+    data.allMarkdownRemark.edges
+      .map(el => el.node.frontmatter)
+      .filter(frontmatter => frontmatter.type === 'developer')
+      .map(frontmatter => {
+        const { enName, githubName, picture } = frontmatter;
+        return (
+          <Developer
+            key={enName}
+            name={frontmatter[`${currentLocale}Name`]}
+            githubName={githubName}
+            photoURL={picture}
+          />
+        );
+      });
+
+  const getPhotographerOfTheDay = () => {
+    const photographers = data.allMarkdownRemark.edges.filter(
+      el => el.node.frontmatter.type === 'photographer'
+    );
+    const photographer =
+      photographers[getRandomIntFromCurrentDate(photographers.length)];
+
+    const {
+      name,
+      picture,
+      birthDate,
+      deathDate,
+    } = photographer.node.frontmatter;
+
+    const { slug } = photographer.node.fields;
+
+    return (
+      <PhotographerCard
+        photoURL={picture}
+        name={name}
+        slug={slug}
+        birthDate={parseCmsDate(birthDate)}
+        deathDate={parseCmsDate(deathDate)}
+      />
+    );
+  };
+
+  return (
+    <IntlContextConsumer>
+      {({ language: currentLocale }) => (
+        <Layout>
+          <p className={styles.description}>
+            {data.markdownRemark.frontmatter[`${currentLocale}SiteDescription`]}
+          </p>
+          <h2>
+            <FormattedMessage id="photographerOfTheDay" />
+            {getPhotographerOfTheDay()}
+          </h2>
+          <div className={styles.photographerOfTheDayWrapper}></div>
+          <h2>
+            <FormattedMessage id="ourTeam" />
+          </h2>
+          <div className={styles.developersBlock}>
+            {getDevelopersList(currentLocale)}
+          </div>
+        </Layout>
+      )}
+    </IntlContextConsumer>
+  );
+};
 
 export default injectIntl(IndexPage);
 
@@ -48,15 +90,22 @@ export const query = graphql`
         beSiteDescription
       }
     }
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "developer" } } }) {
+    allMarkdownRemark {
       edges {
         node {
           frontmatter {
+            name
+            birthDate
+            deathDate
             enName
             ruName
             beName
             githubName
             picture
+            type
+          }
+          fields {
+            slug
           }
         }
       }

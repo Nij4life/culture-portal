@@ -3,7 +3,7 @@ type: photographer
 name: Marry Yaskevich
 picture: /assets/marry-photo.jpg
 birthDate: 10/28/1990
-deathDate: ''
+deathDate: Invalid date
 gallery:
   - picture: /assets/marry3.jpg
     title: Береговая линия

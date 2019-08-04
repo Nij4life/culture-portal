@@ -7,12 +7,20 @@ export default ({ pictures }) => {
   return (
     <AliceCarousel mouseDragEnabled >
       {pictures.map( picture => (
-        <img 
-          style={{ height: '70vh', width: 'auto', margin: '0 auto' }}
-          src={picture.picture} 
-          onDragStart={handleOnDragStart} className="yours-custom-class" 
-          alt={`${picture.title}`}
+        <div key={picture.title}>
+          <img 
+            key={`img-${picture.title}`}
+            style={{ height: '70vh', width: 'auto', margin: '0 auto', display: 'block' }}
+            src={picture.picture} 
+            onDragStart={handleOnDragStart} className="yours-custom-class" 
+            alt={`${picture.title}`}
           />
+          <p 
+            key={`title-${picture.title}`}
+          >
+            {picture.title}
+          </p>
+        </div>
       ))}
     </AliceCarousel>
   )

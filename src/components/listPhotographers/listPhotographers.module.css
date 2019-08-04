@@ -1,14 +1,7 @@
 .photographers-list {
-  list-style-type: none;
-  border: 1px solid black;
-  margin: 5px;
-}
-
-.photographer-image {
-  object-fit: cover;
-}
-
-.link {
-  text-decoration: none;
-  color: #000;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 400px));
+  grid-gap: 20px;
+  justify-content: center;
+  padding: 0;
 }

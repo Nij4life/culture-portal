@@ -41,8 +41,14 @@
 
 ### Stanislau Hutsau (@gutsstas)
 
-| time spent | feature |
-| ---------- | ------- |
+| time spent | feature                              |
+| ---------- | -----------------------------------  |
+| 4h         | work on component Autor of the day   |
+| 3h         | work on component Google Map         |
+| 2h         | change Google Map on Yandex Map      |
+| 3h         | work on component YouTube video      |
+
+
 
 
 ## Self evaluation

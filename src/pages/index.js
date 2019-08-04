@@ -28,15 +28,18 @@ const IndexPage = ({ data }) => {
         );
       });
 
-  const getPhotographerOfTheDay = () => {
+  const getPhotographerOfTheDay = currentLocale => {
     const photographers = data.allMarkdownRemark.edges.filter(
       el => el.node.frontmatter.type === 'photographer'
     );
     const photographer =
       photographers[getRandomIntFromCurrentDate(photographers.length)];
-
+    
+    let { name } = photographer.node.frontmatter;
+    if (currentLocale !== 'en') {
+      name = photographer.node.frontmatter[`${currentLocale}`].name;
+    } 
     const {
-      name,
       picture,
       birthDate,
       deathDate,
@@ -65,7 +68,7 @@ const IndexPage = ({ data }) => {
           <h2>
             <FormattedMessage id="photographerOfTheDay" />
           </h2>
-          {getPhotographerOfTheDay()}
+          {getPhotographerOfTheDay(currentLocale)}
           <div className={styles.photographerOfTheDayWrapper}></div>
           <h2>
             <FormattedMessage id="ourTeam" />
@@ -103,6 +106,12 @@ export const query = graphql`
             githubName
             picture
             type
+            be {
+              name
+            }
+            ru {
+              name
+            }            
           }
           fields {
             slug

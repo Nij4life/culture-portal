@@ -10,16 +10,19 @@ class Search extends Component {
       elems: [],
     };
     for (let index = 0; index < props.list.length; index += 1) {
-      const { name, picture, birthDate, deathDate, birthplace } = props.list[
-        index
-      ].node.frontmatter;
-      const { slug } = props.list[index].node.fields;
+      const { 
+        name, 
+        picture, 
+        birthDate, 
+        deathDate, 
+        birthplace, 
+        slug } = props.list[index];
       this.state.initElems.push([
         name,
         picture,
         birthDate,
         deathDate,
-        birthplace || '',
+        birthplace,
         slug,
       ]);
       this.state.elems.push([
@@ -27,7 +30,7 @@ class Search extends Component {
         picture,
         birthDate,
         deathDate,
-        birthplace || '',
+        birthplace,
         slug,
       ]);
     }

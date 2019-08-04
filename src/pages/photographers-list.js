@@ -21,7 +21,11 @@ const PhotographersList = ({ data, intl }) => {
       resObj.picture = node.frontmatter.picture;
       resObj.birthDate = node.frontmatter.birthDate;
       resObj.deathDate = node.frontmatter.deathDate;
-      resObj.birthplace = node.frontmatter.birthplace || '';
+      let birthplace = node.frontmatter.birthplace || '';
+      if (currentLocale !== 'en') {
+        birthplace = node.frontmatter[`${currentLocale}`].birthplace || '';
+      } 
+      resObj.birthplace = birthplace;
       resObj.slug = node.fields.slug;
       return resObj;
     })
@@ -61,9 +65,11 @@ export const query = graphql`
             birthplace
             be {
               name
+              birthplace
             }
             ru {
               name
+              birthplace
             }
           }
           fields {

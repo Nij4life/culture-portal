@@ -12,14 +12,14 @@ const Persons = ({ data }) => {
       <Layout>
         <div>
           <PersonsInf
-            name = {post.frontmatter.name}
+            name = {(currentLocale === 'en')?post.frontmatter.name:post.frontmatter[`${currentLocale}`].name}
             picture = {post.frontmatter.picture}
             birthDate = {post.frontmatter.birthDate}
             deathDate = {post.frontmatter.deathDate}
             video = {post.frontmatter.videoId}
-            coordinates = {post.frontmatter.en.coordinates}
-            lifeEvents = {post.frontmatter.en.lifeEvents}
-            works = {post.frontmatter.en.works}
+            coordinates = {post.frontmatter[`${currentLocale}`].coordinates}
+            lifeEvents = {post.frontmatter[`${currentLocale}`].lifeEvents}
+            works = {post.frontmatter[`${currentLocale}`].works}
             pictures = {post.frontmatter.gallery}
           />
         </div>
@@ -38,8 +38,8 @@ query ($slug: String!) {
       birthDate
       deathDate
       picture
-      videoId
       name
+      videoId
       gallery {
         picture
         title
@@ -61,6 +61,11 @@ query ($slug: String!) {
         name
       }
       en {
+        coordinates {
+          description
+          latitude
+          longitude
+        }
         lifeEvents {
           date
           desctiption
@@ -68,11 +73,6 @@ query ($slug: String!) {
         works {
           date
           title
-        }
-        coordinates {
-          description
-          latitude
-          longitude
         }
       }
       be {
@@ -93,5 +93,4 @@ query ($slug: String!) {
       }
     }
   }
-}
-`;  
+}`;  

@@ -21,12 +21,13 @@
 
 | time spent | feature                                                                    |
 | ---------- | -------------------------------------------------------------------------- |
-| 3h         | added first data                                                           |
+| 5h         | added first data                                                           |
 | 1h         | added a photographer’s test page with the name and dates of life and death |
 | 2h         | added a timeline component                                                 |
 | 2h         | added a gallery component                                                  |
 | 1.5h       | edit styles on user page                                                   |
 | 1h         | syntax error correction, eslint configuration                              |
+| 1.5h       | setting translation of the page of the photographer                        |
 
 ### Maksim Kudrautsau (@ponyborn)
 

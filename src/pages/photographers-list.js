@@ -28,6 +28,12 @@ export const query = graphql`
             birthDate
             deathDate
             birthplace
+            be {
+              name
+            }
+            ru {
+              name
+            }
           }
           fields {
             slug

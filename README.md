@@ -4,8 +4,12 @@
 
 ### Aliaksandr Serykau (@nij4life)
 
-| time spent | feature |
-| ---------- | ------- |
+| time spent | feature                       |
+| ---------- | ------------------------------|
+| 5h         | add slugs and link to them    |
+| 2h         | add error page and favicon    |
+| 4h         | create button that scroll up  |
+| 1h         | fix scroll up button          |
 
 
 ### Aliaksandr Torkhau (@torkhau)

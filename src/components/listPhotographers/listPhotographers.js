@@ -6,7 +6,7 @@ import { parseCmsDate } from '../../utils';
 export default ({ elems }) => (
   <ul className={styles.photographersList}>
     {elems.map(elem => {
-      const [name, picture, birthDate, deathDate, slug] = elem;
+      const [name, picture, birthDate, deathDate, , slug] = elem;
       return (
         <PhotographerCard
           key={name}

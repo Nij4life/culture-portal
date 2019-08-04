@@ -1,22 +1,5 @@
 
 @import './modal-video.min.css';
-.open {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-    font-size: 14px;
-    width: 30%;
-    height: 30px;
-    color: white;
-    text-align: center;
-    margin: 0 auto;
-    border-radius: 10px;
-    background: #AFCDE7;
-    transition: 0.2s;
-  } 
-
-.open:hover {
-  background: #AFCDE7;
-  cursor: pointer;
-}
 
 .modal-video-close-btn:hover {
   cursor: pointer;

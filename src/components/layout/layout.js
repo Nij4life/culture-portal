@@ -1,8 +1,27 @@
 import React from 'react';
 import { injectIntl, FormattedMessage, Link } from 'gatsby-plugin-intl';
 import LanguageSelector from '../languageSelector/languageSelector';
+import { AppBar, Typography, Toolbar } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import styles from './layout.module.css';
 import Button from '../buttonUp/button';
+
+const useStyles = makeStyles({
+  header: {
+    margin: '1rem 0 0 1rem',
+  },
+  toolBar: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  content: {
+    margin: '2rem auto',
+    padding: '0 1rem',
+    maxWidth: 'var(--page-max-width)',
+  },
+  navLink: { 'margin-right': '10px' },
+});
 
 const NavLink = ({ to, children }) => (
   <li className={styles.listLink}>
@@ -10,31 +29,31 @@ const NavLink = ({ to, children }) => (
   </li>
 );
 
-const Layout = ({ children }) => (
-  <div>
-    <div className={styles.headerWrapper}>
-      <header>
-        <h1 className={styles.mainHeader}>
+const Layout = ({ children }) => {
+  const classes = useStyles();
+
+  return (
+    <div>
+      <AppBar position="static">
+        <Typography variant="h4" component="h1" className={classes.header}>
           <FormattedMessage id="title" />
-        </h1>
-        <div className={styles.headerMenu}>
-          <nav>
-            <ul className={styles.list}>
-              <NavLink to="/">
-                <FormattedMessage id="home" />
-              </NavLink>
-              <NavLink to="/photographers-list/">
-                <FormattedMessage id="photographersList" />
-              </NavLink>
-            </ul>
-          </nav>
+        </Typography>
+        <Toolbar className={classes.toolBar}>
+          <div>
+            <Link to="/" className={classes.navLink}>
+              <FormattedMessage id="home" />
+            </Link>
+            <Link to="/photographers-list/" className={classes.navLink}>
+              <FormattedMessage id="photographersList" />
+            </Link>
+          </div>
           <LanguageSelector />
-        </div>
-      </header>
+        </Toolbar>
+      </AppBar>
+      <div className={classes.content}>{children}</div>
+      <Button />
     </div>
-    <div className={styles.contentWrapper}>{children}</div>
-    <Button />
-  </div>
-);
+  );
+};
 
 export default injectIntl(Layout);

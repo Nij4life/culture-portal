@@ -64,8 +64,8 @@ const IndexPage = ({ data }) => {
           </p>
           <h2>
             <FormattedMessage id="photographerOfTheDay" />
-            {getPhotographerOfTheDay()}
           </h2>
+          {getPhotographerOfTheDay()}
           <div className={styles.photographerOfTheDayWrapper}></div>
           <h2>
             <FormattedMessage id="ourTeam" />
